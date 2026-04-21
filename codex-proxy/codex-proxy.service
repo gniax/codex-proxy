@@ -1,0 +1,14 @@
+[Unit]
+Description=Codex CLI → OpenAI-compatible proxy
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/openclaw/codex-proxy
+EnvironmentFile=%h/openclaw/.env
+ExecStart=/usr/bin/node %h/openclaw/codex-proxy/server.js
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target

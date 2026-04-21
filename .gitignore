@@ -1,0 +1,4 @@
+.env
+data/
+codex-proxy/proxy.env
+node_modules/
